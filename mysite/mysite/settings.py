@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rajatkhemka',
+        'NAME': 'rajatkhemka', #mysite_db replaced by rajatkhemka
         'USER':'rajatkhemka',
         'HOST':'localhost',
         'PORT':'5432'

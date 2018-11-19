@@ -15,7 +15,7 @@ def vote(request, question_id):
     try:
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
-        # Redisplay the question voting form.
+        # Redisplay the  question voting form.
         return render(request, 'polls/detail.html', {
             'question': question,
             'error_message': "You didn't select a choice.",
@@ -28,7 +28,7 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
-# Defining    views inside a View Specific Class
+# Defining views inside a View Specific Class
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
