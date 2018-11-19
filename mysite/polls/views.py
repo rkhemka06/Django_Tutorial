@@ -3,6 +3,10 @@ from django.http import Http404
 # Create your views here.
 from django.template import loader
 
+
+
+
+
 from .models import Question
 
 
