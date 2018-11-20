@@ -4,7 +4,7 @@
 <!--
 We set the form’s action to  'polls:vote' question.id %}, and we set method="post".
 Using method="post" (as opposed to method="get") is very important, because the act of
-submitting this form will alter data server-side. Whenever you create a form that alters data server-side,
+submitting this form will alter data server-side. Whenever you create a form that alters data  server-side,
 use method="post". This tip isn’t specific to Django; it’s just good Web development practice.
 -->
 <form action="{% url 'polls:vote' question.id %}" method="post">
