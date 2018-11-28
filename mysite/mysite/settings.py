@@ -55,7 +55,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        #DIRS is a list of filesystem directories to check when loading Django templates; it’s a search path.
+        # DIRS is a list of filesystem directories to check when loading Django templates; it’s a search path.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rajatkhemka', #mysite_db replaced by rajatkhemka
-        'USER':'rajatkhemka',
-        'HOST':'localhost',
-        'PORT':'5432'
+        'NAME': 'rajatkhemka',  # mysite_db replaced by rajatkhemka
+        'USER': 'rajatkhemka',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
