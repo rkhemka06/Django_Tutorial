@@ -10,6 +10,7 @@ def index(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/results.html', {'question': question})
 
+
 # define a vote method
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -29,6 +30,7 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
+
 # Defining views inside a View Specific Class
 
 class IndexView(generic.ListView):
@@ -39,7 +41,8 @@ class IndexView(generic.ListView):
         """Return the last five published questions."""
         return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
 
-#Question.objects.filter(pub_date__lte=timezone.now()) returns a queryset containing Questions whose pub_date is less
+
+# Question.objects.filter(pub_date__lte=timezone.now()) returns a queryset containing Questions whose pub_date is less
 # than or equal to - that is, earlier than or equal to - timezone.now.
 
 class DetailView(generic.DetailView):
@@ -72,3 +75,7 @@ def results(request, question_id):
 
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
+
+
+def homepage(request):
+    return render(request,"polls/homepage.html")
